@@ -1,0 +1,338 @@
+body {
+    margin: 0 auto;
+    font-family: Arial;
+}
+
+.zone {
+    /*padding:30px 50px;*/
+    cursor:pointer;
+    color:#FFF;
+    font-size:2em;
+    border-radius:4px;
+    border:1px solid #bbb;
+    transition: all 0.3s linear;
+}
+
+/* .zone:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+} */
+
+/***********************************************************************
+ *  Nav Bar
+ **********************************************************************/
+.main-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    font-size: 0.7em;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-nav {
+        
+        font-size: 0.5em;
+        padding: 0;
+    }
+}
+ul {
+    float: right;
+    list-style-type: none;
+}
+.push {
+    margin-right: auto;
+}
+
+li {
+    padding: 5px 10px;
+}
+
+a {
+    color: #f5f5f6;
+    text-decoration: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+/* =========== */
+/* NAVIGATION */
+nav {
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 5px 10px;
+  box-shadow: 0px 5px 0px #dedede;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+/* =========== */
+
+/***********************************************************************
+ *  Cover
+ **********************************************************************/
+.container {
+    /*show heigh: auto*/
+    height: 90vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/bg-animate.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+}
+.title {
+    color: rgb(255, 255, 255);
+    font-size: 9rem;
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+}
+.tag {
+    color: #fff;
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+}
+/* reviews */
+.section1 {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(28, 31, 29, 0.9);
+    text-align: left;
+    
+    
+}
+.rev li{
+    background-color: rgba(35, 39, 39, 0.1);
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+.rev p{
+    background-color: rgba(35, 39, 39, 0.1);
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+/***********************************************************************
+ *  Grid Panel
+ **********************************************************************/
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 20px;
+}
+
+.box {
+    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: rgb(255, 255, 255);
+    padding: 130px;
+    margin: 20px;
+}
+
+.box > img {
+    width: 100%;
+}
+
+.box:hover {
+    -webkit-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+}
+
+.box > img {
+    width: 100%;
+    height: auto;
+}
+#bg1{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/bgGallery.jpg) no-repeat; 
+    background-size: cover;
+}
+#bg2{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/bgMenu.jpg) no-repeat; 
+    background-size: cover;
+    
+}
+#bg3{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/bgServices.jpg) no-repeat;
+    background-size: cover; 
+}
+.blue p {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  text-align: center;
+}
+/***********************************************************************
+ *  Footer
+ **********************************************************************/
+footer {
+    text-align: center;
+    background-color: #444;
+}
+
+.fa {
+  padding: 10px;
+  margin: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.cp-text{ 
+    font-size: 15px;
+    color: rgba(0,0,0,.9); 
+    text-shadow: 0 1px rgba(255, 255, 255, 0.1);
+}
+
+
+/*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
+/***********************************************************************
+ *  Green Background
+ **********************************************************************/
+.green {
+    background: #1c1f1d; /* Old browsers */
+    background: -moz-linear-gradient(top, #1c1f1d 0%, #383f3a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1c1f1d), color-stop(100%,#383f3a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #1c1f1d 0%, #383f3a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #1c1f1d 0%, #383f3a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #1c1f1d 0%, #383f3a 100%); /* IE10+ */
+    background: linear-gradient(top, #1c1f1d 0%, #383f3a 100%); /* W3C */
+}
+
+/***********************************************************************
+ *  Red Background
+ **********************************************************************/
+.red {
+    background: #C655BE; /* Old browsers */
+    background: -moz-linear-gradient(top, #C655BE 0%, #cf0404 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#C655BE), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* IE10+ */
+    background: linear-gradient(top, #C655BE 0%,#cf0404 100%); /* W3C */
+}
+
+/***********************************************************************
+ *  Yellow Background
+ **********************************************************************/
+.yellow {
+    background: #F3AAAA; /* Old browsers */
+    background: -moz-linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F3AAAA), color-stop(100%,#febf04)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* IE10+ */
+    background: linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* W3C */
+}
+
+/***********************************************************************
+ *  Blue Background
+ **********************************************************************/
+.blue {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(166,166,168,1) 100%, rgba(0,0,0,1) 100%);
+}
+
